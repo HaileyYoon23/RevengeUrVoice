@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD4CD1CE25F0FBF0003B2592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4CD1CD25F0FBF0003B2592 /* AppDelegate.swift */; };
+		CD4CD1D025F0FBF0003B2592 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4CD1CF25F0FBF0003B2592 /* SceneDelegate.swift */; };
+		CD4CD1D225F0FBF0003B2592 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4CD1D125F0FBF0003B2592 /* ViewController.swift */; };
+		CD4CD1D525F0FBF0003B2592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4CD1D325F0FBF0003B2592 /* Main.storyboard */; };
+		CD4CD1D725F0FBF1003B2592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD4CD1D625F0FBF1003B2592 /* Assets.xcassets */; };
+		CD4CD1DA25F0FBF1003B2592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4CD1D825F0FBF1003B2592 /* LaunchScreen.storyboard */; };
+		CD4CD1E525F0FBF1003B2592 /* RevengeUrVoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4CD1E425F0FBF1003B2592 /* RevengeUrVoiceTests.swift */; };
+		CD4CD1F025F0FBF1003B2592 /* RevengeUrVoiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4CD1EF25F0FBF1003B2592 /* RevengeUrVoiceUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD4CD1E125F0FBF1003B2592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD4CD1C225F0FBF0003B2592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD4CD1C925F0FBF0003B2592;
+			remoteInfo = RevengeUrVoice;
+		};
+		CD4CD1EC25F0FBF1003B2592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD4CD1C225F0FBF0003B2592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD4CD1C925F0FBF0003B2592;
+			remoteInfo = RevengeUrVoice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD4CD1CA25F0FBF0003B2592 /* RevengeUrVoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevengeUrVoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4CD1CD25F0FBF0003B2592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD4CD1CF25F0FBF0003B2592 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CD4CD1D125F0FBF0003B2592 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD4CD1D425F0FBF0003B2592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD4CD1D625F0FBF1003B2592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD4CD1D925F0FBF1003B2592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD4CD1DB25F0FBF1003B2592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD4CD1E025F0FBF1003B2592 /* RevengeUrVoiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevengeUrVoiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4CD1E425F0FBF1003B2592 /* RevengeUrVoiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevengeUrVoiceTests.swift; sourceTree = "<group>"; };
+		CD4CD1E625F0FBF1003B2592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD4CD1EB25F0FBF1003B2592 /* RevengeUrVoiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevengeUrVoiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4CD1EF25F0FBF1003B2592 /* RevengeUrVoiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevengeUrVoiceUITests.swift; sourceTree = "<group>"; };
+		CD4CD1F125F0FBF1003B2592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD4CD1C725F0FBF0003B2592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4CD1DD25F0FBF1003B2592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4CD1E825F0FBF1003B2592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD4CD1C125F0FBF0003B2592 = {
+			isa = PBXGroup;
+			children = (
+				CD4CD1CC25F0FBF0003B2592 /* RevengeUrVoice */,
+				CD4CD1E325F0FBF1003B2592 /* RevengeUrVoiceTests */,
+				CD4CD1EE25F0FBF1003B2592 /* RevengeUrVoiceUITests */,
+				CD4CD1CB25F0FBF0003B2592 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD4CD1CB25F0FBF0003B2592 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD4CD1CA25F0FBF0003B2592 /* RevengeUrVoice.app */,
+				CD4CD1E025F0FBF1003B2592 /* RevengeUrVoiceTests.xctest */,
+				CD4CD1EB25F0FBF1003B2592 /* RevengeUrVoiceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD4CD1CC25F0FBF0003B2592 /* RevengeUrVoice */ = {
+			isa = PBXGroup;
+			children = (
+				CD4CD1CD25F0FBF0003B2592 /* AppDelegate.swift */,
+				CD4CD1CF25F0FBF0003B2592 /* SceneDelegate.swift */,
+				CD4CD1D125F0FBF0003B2592 /* ViewController.swift */,
+				CD4CD1D325F0FBF0003B2592 /* Main.storyboard */,
+				CD4CD1D625F0FBF1003B2592 /* Assets.xcassets */,
+				CD4CD1D825F0FBF1003B2592 /* LaunchScreen.storyboard */,
+				CD4CD1DB25F0FBF1003B2592 /* Info.plist */,
+			);
+			path = RevengeUrVoice;
+			sourceTree = "<group>";
+		};
+		CD4CD1E325F0FBF1003B2592 /* RevengeUrVoiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD4CD1E425F0FBF1003B2592 /* RevengeUrVoiceTests.swift */,
+				CD4CD1E625F0FBF1003B2592 /* Info.plist */,
+			);
+			path = RevengeUrVoiceTests;
+			sourceTree = "<group>";
+		};
+		CD4CD1EE25F0FBF1003B2592 /* RevengeUrVoiceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD4CD1EF25F0FBF1003B2592 /* RevengeUrVoiceUITests.swift */,
+				CD4CD1F125F0FBF1003B2592 /* Info.plist */,
+			);
+			path = RevengeUrVoiceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD4CD1C925F0FBF0003B2592 /* RevengeUrVoice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD4CD1F425F0FBF1003B2592 /* Build configuration list for PBXNativeTarget "RevengeUrVoice" */;
+			buildPhases = (
+				CD4CD1C625F0FBF0003B2592 /* Sources */,
+				CD4CD1C725F0FBF0003B2592 /* Frameworks */,
+				CD4CD1C825F0FBF0003B2592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RevengeUrVoice;
+			productName = RevengeUrVoice;
+			productReference = CD4CD1CA25F0FBF0003B2592 /* RevengeUrVoice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD4CD1DF25F0FBF1003B2592 /* RevengeUrVoiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD4CD1F725F0FBF1003B2592 /* Build configuration list for PBXNativeTarget "RevengeUrVoiceTests" */;
+			buildPhases = (
+				CD4CD1DC25F0FBF1003B2592 /* Sources */,
+				CD4CD1DD25F0FBF1003B2592 /* Frameworks */,
+				CD4CD1DE25F0FBF1003B2592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD4CD1E225F0FBF1003B2592 /* PBXTargetDependency */,
+			);
+			name = RevengeUrVoiceTests;
+			productName = RevengeUrVoiceTests;
+			productReference = CD4CD1E025F0FBF1003B2592 /* RevengeUrVoiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD4CD1EA25F0FBF1003B2592 /* RevengeUrVoiceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD4CD1FA25F0FBF1003B2592 /* Build configuration list for PBXNativeTarget "RevengeUrVoiceUITests" */;
+			buildPhases = (
+				CD4CD1E725F0FBF1003B2592 /* Sources */,
+				CD4CD1E825F0FBF1003B2592 /* Frameworks */,
+				CD4CD1E925F0FBF1003B2592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD4CD1ED25F0FBF1003B2592 /* PBXTargetDependency */,
+			);
+			name = RevengeUrVoiceUITests;
+			productName = RevengeUrVoiceUITests;
+			productReference = CD4CD1EB25F0FBF1003B2592 /* RevengeUrVoiceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD4CD1C225F0FBF0003B2592 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					CD4CD1C925F0FBF0003B2592 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					CD4CD1DF25F0FBF1003B2592 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CD4CD1C925F0FBF0003B2592;
+					};
+					CD4CD1EA25F0FBF1003B2592 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CD4CD1C925F0FBF0003B2592;
+					};
+				};
+			};
+			buildConfigurationList = CD4CD1C525F0FBF0003B2592 /* Build configuration list for PBXProject "RevengeUrVoice" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD4CD1C125F0FBF0003B2592;
+			productRefGroup = CD4CD1CB25F0FBF0003B2592 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD4CD1C925F0FBF0003B2592 /* RevengeUrVoice */,
+				CD4CD1DF25F0FBF1003B2592 /* RevengeUrVoiceTests */,
+				CD4CD1EA25F0FBF1003B2592 /* RevengeUrVoiceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD4CD1C825F0FBF0003B2592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4CD1DA25F0FBF1003B2592 /* LaunchScreen.storyboard in Resources */,
+				CD4CD1D725F0FBF1003B2592 /* Assets.xcassets in Resources */,
+				CD4CD1D525F0FBF0003B2592 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4CD1DE25F0FBF1003B2592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4CD1E925F0FBF1003B2592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD4CD1C625F0FBF0003B2592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4CD1D225F0FBF0003B2592 /* ViewController.swift in Sources */,
+				CD4CD1CE25F0FBF0003B2592 /* AppDelegate.swift in Sources */,
+				CD4CD1D025F0FBF0003B2592 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4CD1DC25F0FBF1003B2592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4CD1E525F0FBF1003B2592 /* RevengeUrVoiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4CD1E725F0FBF1003B2592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4CD1F025F0FBF1003B2592 /* RevengeUrVoiceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD4CD1E225F0FBF1003B2592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD4CD1C925F0FBF0003B2592 /* RevengeUrVoice */;
+			targetProxy = CD4CD1E125F0FBF1003B2592 /* PBXContainerItemProxy */;
+		};
+		CD4CD1ED25F0FBF1003B2592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD4CD1C925F0FBF0003B2592 /* RevengeUrVoice */;
+			targetProxy = CD4CD1EC25F0FBF1003B2592 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD4CD1D325F0FBF0003B2592 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD4CD1D425F0FBF0003B2592 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD4CD1D825F0FBF1003B2592 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD4CD1D925F0FBF1003B2592 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD4CD1F225F0FBF1003B2592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD4CD1F325F0FBF1003B2592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD4CD1F525F0FBF1003B2592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PZHF253MM4;
+				INFOPLIST_FILE = RevengeUrVoice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Apps.Yoon.RevengeUrVoice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD4CD1F625F0FBF1003B2592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PZHF253MM4;
+				INFOPLIST_FILE = RevengeUrVoice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Apps.Yoon.RevengeUrVoice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD4CD1F825F0FBF1003B2592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RevengeUrVoiceTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Apps.Yoon.RevengeUrVoiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RevengeUrVoice.app/RevengeUrVoice";
+			};
+			name = Debug;
+		};
+		CD4CD1F925F0FBF1003B2592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RevengeUrVoiceTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Apps.Yoon.RevengeUrVoiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RevengeUrVoice.app/RevengeUrVoice";
+			};
+			name = Release;
+		};
+		CD4CD1FB25F0FBF1003B2592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RevengeUrVoiceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Apps.Yoon.RevengeUrVoiceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RevengeUrVoice;
+			};
+			name = Debug;
+		};
+		CD4CD1FC25F0FBF1003B2592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RevengeUrVoiceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Apps.Yoon.RevengeUrVoiceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RevengeUrVoice;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD4CD1C525F0FBF0003B2592 /* Build configuration list for PBXProject "RevengeUrVoice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4CD1F225F0FBF1003B2592 /* Debug */,
+				CD4CD1F325F0FBF1003B2592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD4CD1F425F0FBF1003B2592 /* Build configuration list for PBXNativeTarget "RevengeUrVoice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4CD1F525F0FBF1003B2592 /* Debug */,
+				CD4CD1F625F0FBF1003B2592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD4CD1F725F0FBF1003B2592 /* Build configuration list for PBXNativeTarget "RevengeUrVoiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4CD1F825F0FBF1003B2592 /* Debug */,
+				CD4CD1F925F0FBF1003B2592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD4CD1FA25F0FBF1003B2592 /* Build configuration list for PBXNativeTarget "RevengeUrVoiceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4CD1FB25F0FBF1003B2592 /* Debug */,
+				CD4CD1FC25F0FBF1003B2592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD4CD1C225F0FBF0003B2592 /* Project object */;
+}
