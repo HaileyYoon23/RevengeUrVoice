@@ -43,4 +43,7 @@ iOS App. using Swift
 
 ## 2.2 Output
 
+https://user-images.githubusercontent.com/35250492/110229448-df910f80-7f4c-11eb-93f1-610323eeb59e.mp4
+
+
 
