@@ -7,33 +7,171 @@
 
 import UIKit
 import Speech
+import AVFoundation
+
+extension NSMutableAttributedString {
+    func emphasize(_ text: String, fontSize: CGFloat) -> NSMutableAttributedString {
+        let attribute: [NSAttributedString.Key: Any] = [.font: UIFont.boldSystemFont(ofSize: fontSize)]
+        self.append(NSMutableAttributedString(string: text + " ", attributes: attribute))
+        return self
+    }
+    func normal(_ text: String, fontSize: CGFloat) -> NSMutableAttributedString {
+        let attribute: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: fontSize)]
+        self.append(NSMutableAttributedString(string: text + " ", attributes: attribute))
+        
+        return self
+    }
+}
 
 // Available upper iOS 10.0
 class ViewController: UIViewController, SFSpeechRecognizerDelegate {
 
     @IBOutlet var btnRecord: UIButton!
     @IBOutlet var txtSpeechToTextView: UITextView!
+    @IBOutlet var lblAlramToTalkFor: UILabel!
     
+    private var words: String?
+    private var prevWords: String?
+    private var combinedWords: String = ""
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "ko-KR"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
     private var recordingWord = false
     
-    private var prevText: String?
+    private var wordList: [Substring] = [Substring]()
+    private var showingString = NSMutableAttributedString()
+    private var wordCount: Int = 0
+    private var prevWordCount: Int = 0
+    private var endRecord: Bool = false
+    private var restartRecord: Bool = false
+    private var isSaid : Bool = false
+    
+    private var talkinfo = TalkInfo(talkFor: "", toTalk: "")
+    let DB = TalkInfoDB()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         speechRecognizer?.delegate = self
+        
+        
+        btnRecord.backgroundColor = UIColor.lightGray
+        
+        
         let checkSelecor = #selector(ViewController.checkState)
-//        _ = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: checkSelecor, userInfo: nil, repeats: true)
+        _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: checkSelecor, userInfo: nil, repeats: true)
+        
+        
     }
     
     @objc func checkState() {
-        prevText = txtSpeechToTextView.text
+        if let talkInfoItem = TalkInfoDB.readTalkInfo() {
+            talkinfo = talkInfoItem
+        }
+        lblAlramToTalkFor.text = "'\(talkinfo.talkFor ?? "")' 에  '\(talkinfo.toTalk ?? "")' 로 대응"
+//        if combinedWords == "" {
+//            txtSpeechToTextView.text = "아래 버튼을 누루고 말하기 시작하세요!"
+//        }
+//        print("\(words) \(prevWords) \(txtSpeechToTextView.text)")
+        if let theWord = words {
+            showingString = NSMutableAttributedString()
+            if let pW = prevWords {
+                combinedWords = pW + " " + theWord
+                wordList = combinedWords.split(separator: " ")
+            } else {
+                combinedWords = theWord
+                wordList = combinedWords.split(separator: " ")
+            }
+            
+            wordCount = 0
+            for str in wordList {
+                if str == (talkinfo.talkFor) {
+                    showingString = showingString.emphasize(String(str), fontSize: 17.0)
+                    wordCount += 1
+                } else {
+                    showingString = showingString.normal(String(str), fontSize: 15.0)
+                }
+            }
+            txtSpeechToTextView.attributedText = showingString
+        }
+        if prevWordCount != wordCount && restartRecord == false {
+            if audioEngine.isRunning {
+                prevWordCount = wordCount
+                endRecord = true
+            }
+        }
+        if endRecord {
+            if audioEngine.isRunning {
+//                print("isEnding")
+                if isSaid == false && (words ?? "") != "" {
+                    self.view.backgroundColor = UIColor.lightGray
+                    usleep(UInt32(1000*400))
+                }
+                audioEngine.stop()
+                audioEngine.reset()
+                recognitionRequest?.endAudio()
+                recognitionTask?.cancel()
+                btnRecord.isEnabled = false
+//                btnRecord.backgroundColor = UIColor.lightGray
+                showingString = NSMutableAttributedString()
+                words = String()
+                endRecord = false
+                restartRecord = true
+                
+            }
+        }
+        if restartRecord {
+            if audioEngine.isRunning == false && btnRecord.isEnabled == true{
+//                print("isRestarting")
+                if (words ?? "") != "" {
+                    if let pW = prevWords {
+                        prevWords = pW + " " + words!
+                    } else {
+                        prevWords = words!
+                    }
+                    sayTheWord(theWord: talkinfo.toTalk ?? "")
+                    usleep(UInt32(1000*300*((talkinfo.toTalk ?? "").count)))
+                    isSaid = true
+                } else {
+                    self.view.backgroundColor = UIColor.white
+                    isSaid = false
+                }
+                do {
+                    try startRecording()
+                } catch {
+                    print("error?")
+                }
+                restartRecord = false
+                
 
+            }
+        }
+    }
+    
+    func appendStringinRange(listOfAppendString: inout [Substring], listOfSubString: [Substring], startIndex: Int, endIndex: Int) {
+        for i in startIndex...endIndex {
+            listOfAppendString.append(listOfSubString[i])
+        }
+    }
+    
+    func deleteStringinRange(listOfAppendString: inout [Substring], startIndex: Int, endIndex: Int) {
+//        print("to delete \(listOfAppendString)")
+        if startIndex == 0 {
+            listOfAppendString = Array()
+        } else {
+            listOfAppendString = Array(listOfAppendString[0..<startIndex])
+        }
+        
+//        print("After \(listOfAppendString)")
+        
+    }
+    
+    func printStringinRange(listOfSubString: [Substring], startIndex: Int, endIndex: Int) {
+        for i in startIndex...endIndex {
+            print(listOfSubString[i])
+        }
     }
     
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
@@ -44,8 +182,8 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         }
     }
     
-    func startRecording() {
-        
+    func startRecording() throws {
+        btnRecord.backgroundColor = UIColor.white
         if recognitionTask != nil {
             recognitionTask?.cancel()
             recognitionTask = nil
@@ -54,7 +192,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(AVAudioSession.Category.record)
-            try audioSession.setMode(AVAudioSession.Mode.measurement)
+            try audioSession.setMode(AVAudioSession.Mode.default) //AVAudioSessionModeDefault
             try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         } catch {
             print("audioSession properties weren't set because of an error.")
@@ -75,11 +213,10 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             var isFinal = false
             
             if result != nil {
-                
-                self.txtSpeechToTextView.text = result?.bestTranscription.formattedString
+                self.words = result?.bestTranscription.formattedString
                 isFinal = (result?.isFinal)!
-                print(isFinal)
                 self.recordingWord = true
+            } else {
             }
             
             if error != nil || isFinal {
@@ -107,21 +244,48 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             print("audioEngine couldn't start because of an error.")
         }
         
-        txtSpeechToTextView.text = "Say something, I'm listening!"
         
+    }
+    
+    func sayTheWord(theWord: String) {
+        let syntehesizer = AVSpeechSynthesizer()
+        let utterance = AVSpeechUtterance(string: theWord)
+        
+        utterance.voice = AVSpeechSynthesisVoice(language: "ko_KR")
+        utterance.rate = 0.4
+//        utterance.pitchMultiplier = 0.5 // 작아질 수록 낮은 목소리
+        syntehesizer.speak(utterance)
+        do{
+            let _ = try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback,
+                                                                    options: .duckOthers)
+          }catch{
+              print(error)
+          }
     }
 
     @IBAction func RecognitionStart(_ sender: UIButton) {
         if audioEngine.isRunning {
+            print("1")
             audioEngine.stop()
+            audioEngine.reset()
             recognitionRequest?.endAudio()
+            recognitionTask?.cancel()
             btnRecord.isEnabled = false
             btnRecord.backgroundColor = UIColor.lightGray
+            showingString = NSMutableAttributedString()
+            words = String()
         } else {
-            startRecording()
-            btnRecord.backgroundColor = UIColor.white
+            print("2")
+            prevWordCount = 0
+            wordCount = 0
+            do {
+                try startRecording()
+            } catch {
+                print("error~")
+            }
+            
+            
         }
     }
-    
 }
 

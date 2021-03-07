@@ -15,6 +15,8 @@
 		CD4CD1DA25F0FBF1003B2592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4CD1D825F0FBF1003B2592 /* LaunchScreen.storyboard */; };
 		CD4CD1E525F0FBF1003B2592 /* RevengeUrVoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4CD1E425F0FBF1003B2592 /* RevengeUrVoiceTests.swift */; };
 		CD4CD1F025F0FBF1003B2592 /* RevengeUrVoiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4CD1EF25F0FBF1003B2592 /* RevengeUrVoiceUITests.swift */; };
+		CD4CD20525F390AC003B2592 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4CD20425F390AC003B2592 /* EditViewController.swift */; };
+		CD4CD20A25F47466003B2592 /* MemoryTalkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4CD20925F47466003B2592 /* MemoryTalkInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		CD4CD1EB25F0FBF1003B2592 /* RevengeUrVoiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevengeUrVoiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4CD1EF25F0FBF1003B2592 /* RevengeUrVoiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevengeUrVoiceUITests.swift; sourceTree = "<group>"; };
 		CD4CD1F125F0FBF1003B2592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD4CD20425F390AC003B2592 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		CD4CD20925F47466003B2592 /* MemoryTalkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryTalkInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				CD4CD1D625F0FBF1003B2592 /* Assets.xcassets */,
 				CD4CD1D825F0FBF1003B2592 /* LaunchScreen.storyboard */,
 				CD4CD1DB25F0FBF1003B2592 /* Info.plist */,
+				CD4CD20425F390AC003B2592 /* EditViewController.swift */,
+				CD4CD20925F47466003B2592 /* MemoryTalkInfo.swift */,
 			);
 			path = RevengeUrVoice;
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4CD20A25F47466003B2592 /* MemoryTalkInfo.swift in Sources */,
+				CD4CD20525F390AC003B2592 /* EditViewController.swift in Sources */,
 				CD4CD1D225F0FBF0003B2592 /* ViewController.swift in Sources */,
 				CD4CD1CE25F0FBF0003B2592 /* AppDelegate.swift in Sources */,
 				CD4CD1D025F0FBF0003B2592 /* SceneDelegate.swift in Sources */,
