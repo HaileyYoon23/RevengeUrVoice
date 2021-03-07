@@ -40,12 +40,10 @@ iOS App. using Swift
 > 메롱 바보 해삼 멍게 
 
 ## 2.2 Output
-
-<img src = "![IMG_2645](https://user-images.githubusercontent.com/35250492/110229544-aad18800-7f4d-11eb-9e72-fd0cc6d95e2d.PNG)" width="300" height="700">
-![IMG_2648](https://user-images.githubusercontent.com/35250492/110229550-b7ee7700-7f4d-11eb-9b8d-cbef9b38e584.PNG)
-![IMG_2647](https://user-images.githubusercontent.com/35250492/110229553-bc1a9480-7f4d-11eb-9232-d166a6339b54.PNG)
-![IMG_2646](https://user-images.githubusercontent.com/35250492/110229555-be7cee80-7f4d-11eb-85d6-ecac0cb51aad.PNG)
-
+<img src="IMG_2645.PNG" width="200">
+<img src="IMG_2648.PNG" width="200">
+<img src="IMG_2647.PNG" width="200">
+<img src="IMG_2646.PNG" width="200">
 
 https://user-images.githubusercontent.com/35250492/110229448-df910f80-7f4c-11eb-93f1-610323eeb59e.mp4
 
