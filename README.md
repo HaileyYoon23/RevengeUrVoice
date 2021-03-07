@@ -21,22 +21,37 @@ iOS App. using Swift
 앱을 구성하기 위해 필요한 것들은 아래와 같다. <br><br>
 
 1. 사용자의 기본 언어 (Korean/English)
-2. (내가 듣기 싫은) 구별할 특정 단어들    <- 여러 개가 존재할 수 있다
+2. (내가 듣기 싫은) 구별할 특정 단어
 3. (상대방이 듣기 싫은) 자동으로 내뱉을 특정 단어
-4. 구별할 단어들을 저장할 DB
+4. 구별할 단어를 저장할 DB 
 
 ---
 아래는 작업 전 작성해본 Outline 이다<br><br><br>
 <img src="Outline.jpeg" width="700">
 <br><br>
 
-고려되어야 할 가장 중요한 부분은 음성 Input이 들어갈 때, Recognition Request의 Result 가 words 에 추가되는 시점이 **@escaping** 으로 인해 Async 라는 점이며, 사용자의 음성을 듣는 AudioEngine과 특정 단어을 자동으로 내뱉는 AudioEngine이 동일하다는 점이다. <br>
+고려되어야 할 가장 중요한 부분은 음성 Input이 들어갈 때, Recognition Request의 Result 가 words 에 추가되는 시점이 **@escaping** 으로 인해 Async 라는 점이며, 사용자의 음성을 듣는 AudioEngine과 특정 단어을 자동으로 내뱉는 AudioEngine이 동일하다는 점이다. <br><br>
 따라서 Async로 들어오는 Request의 Result를 받을 시점을 잘 파악하고 해당 시점에 알맞게 AudioEngine을 끄고 특정 단어를 내뱉은 후 다시 AudioEngine을 켜는 등의 스케쥴링 조율이 필요하다.
 <br>
 
-# 2. Code
-## 2.1 
+# 2. StoryBoard
+## 2.1 Input
 
-# 3. StoryBoard
-## 3.1 Input
-## 3.2 Output
+> 메롱 바보 해삼 멍게 
+
+## 2.2 Output
+
+<img src = "![IMG_2645](https://user-images.githubusercontent.com/35250492/110229544-aad18800-7f4d-11eb-9e72-fd0cc6d95e2d.PNG)" width="300" height="700">
+![IMG_2648](https://user-images.githubusercontent.com/35250492/110229550-b7ee7700-7f4d-11eb-9b8d-cbef9b38e584.PNG)
+![IMG_2647](https://user-images.githubusercontent.com/35250492/110229553-bc1a9480-7f4d-11eb-9232-d166a6339b54.PNG)
+![IMG_2646](https://user-images.githubusercontent.com/35250492/110229555-be7cee80-7f4d-11eb-85d6-ecac0cb51aad.PNG)
+
+
+https://user-images.githubusercontent.com/35250492/110229448-df910f80-7f4c-11eb-93f1-610323eeb59e.mp4
+
+
+# 3. 추가 에정 기능
+
+1. 여러 TalkFor 허용 
+2. 각 TalkFor 에 대한 ToTalk 연결 
+3. Delay 의 최소화 
