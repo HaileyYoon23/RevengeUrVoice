@@ -70,7 +70,8 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         if let talkInfoItem = TalkInfoDB.readTalkInfo() {
             talkinfo = talkInfoItem
         }
-        lblAlramToTalkFor.text = "'\(talkinfo.talkFor ?? "")' 에  '\(talkinfo.toTalk ?? "")' 로 대응"
+        
+        lblAlramToTalkFor.text = "'\(talkinfo.talkFor )' 에  '\(talkinfo.toTalk )' 로 대응"
 //        if combinedWords == "" {
 //            txtSpeechToTextView.text = "아래 버튼을 누루고 말하기 시작하세요!"
 //        }
@@ -131,8 +132,8 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                     } else {
                         prevWords = words!
                     }
-                    sayTheWord(theWord: talkinfo.toTalk ?? "")
-                    usleep(UInt32(1000*300*((talkinfo.toTalk ?? "").count)))
+                    sayTheWord(theWord: talkinfo.toTalk )
+                    usleep(UInt32(1000*300*((talkinfo.toTalk ).count)))
                     isSaid = true
                 } else {
                     self.view.backgroundColor = UIColor.white
@@ -144,33 +145,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                     print("error?")
                 }
                 restartRecord = false
-                
-
             }
-        }
-    }
-    
-    func appendStringinRange(listOfAppendString: inout [Substring], listOfSubString: [Substring], startIndex: Int, endIndex: Int) {
-        for i in startIndex...endIndex {
-            listOfAppendString.append(listOfSubString[i])
-        }
-    }
-    
-    func deleteStringinRange(listOfAppendString: inout [Substring], startIndex: Int, endIndex: Int) {
-//        print("to delete \(listOfAppendString)")
-        if startIndex == 0 {
-            listOfAppendString = Array()
-        } else {
-            listOfAppendString = Array(listOfAppendString[0..<startIndex])
-        }
-        
-//        print("After \(listOfAppendString)")
-        
-    }
-    
-    func printStringinRange(listOfSubString: [Substring], startIndex: Int, endIndex: Int) {
-        for i in startIndex...endIndex {
-            print(listOfSubString[i])
         }
     }
     
@@ -211,7 +186,6 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest, resultHandler: { (result, error) in
             
             var isFinal = false
-            
             if result != nil {
                 self.words = result?.bestTranscription.formattedString
                 isFinal = (result?.isFinal)!
@@ -265,7 +239,6 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
 
     @IBAction func RecognitionStart(_ sender: UIButton) {
         if audioEngine.isRunning {
-            print("1")
             audioEngine.stop()
             audioEngine.reset()
             recognitionRequest?.endAudio()
@@ -275,7 +248,6 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             showingString = NSMutableAttributedString()
             words = String()
         } else {
-            print("2")
             prevWordCount = 0
             wordCount = 0
             do {
