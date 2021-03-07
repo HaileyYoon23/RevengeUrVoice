@@ -25,7 +25,12 @@ iOS App. using Swift
 3. (상대방이 듣기 싫은) 자동으로 내뱉을 특정 단어
 4. 구별할 단어들을 저장할 DB
 
+---
+<br><br>
+아래는 작업 전 작성해본 Outline 이다<br><br>
 <img src="Outline.jpeg" width="700">
+<br><br>
+
 
 # 2. Code
 ## 2.1 
