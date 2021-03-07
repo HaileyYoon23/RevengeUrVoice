@@ -25,7 +25,14 @@ iOS App. using Swift
 3. (상대방이 듣기 싫은) 자동으로 내뱉을 특정 단어
 4. 구별할 단어들을 저장할 DB
 
+---
+아래는 작업 전 작성해본 Outline 이다<br><br><br>
 <img src="Outline.jpeg" width="700">
+<br><br>
+
+고려되어야 할 가장 중요한 부분은 음성 Input이 들어갈 때, Recognition Request의 Result 가 words 에 추가되는 시점이 **@escaping** 으로 인해 Async 라는 점이며, 사용자의 음성을 듣는 AudioEngine과 특정 단어을 자동으로 내뱉는 AudioEngine이 동일하다는 점이다. <br>
+따라서 Async로 들어오는 Request의 Result를 받을 시점을 잘 파악하고 해당 시점에 알맞게 AudioEngine을 끄고 특정 단어를 내뱉은 후 다시 AudioEngine을 켜는 등의 스케쥴링 조율이 필요하다.
+<br>
 
 # 2. Code
 ## 2.1 
