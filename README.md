@@ -48,7 +48,7 @@ iOS App. using Swift
 https://user-images.githubusercontent.com/35250492/110229448-df910f80-7f4c-11eb-93f1-610323eeb59e.mp4
 
 
-# 3. 추가 에정 기능
+# 3. 추가 정 기능
 
 1. 여러 TalkFor 허용 
 2. 각 TalkFor 에 대한 ToTalk 연결 
