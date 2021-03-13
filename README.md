@@ -1,5 +1,5 @@
 # RevengeUrVoice
-iOS App. using Swift
+iOS App. for Taking Revenge with Specific Word for hate words  
 (available upper iOS 10.0)
 
 # 1. Introduction
